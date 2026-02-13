@@ -3,21 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="no-referrer">
     <title>TELOS Master File</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Login / Setup Screen -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-box">
+            <h1>🔐 TELOS Master File</h1>
+            <p class="login-subtitle">Enter your password to unlock</p>
+
+            <div id="setupForm" class="login-form" style="display:none;">
+                <p class="setup-notice">First time? Create a password to encrypt your data.</p>
+                <input type="password" id="newPassword" placeholder="Create password (8+ characters)" autocomplete="new-password">
+                <input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="new-password">
+                <button id="setupBtn" class="login-btn">Set Up Encryption</button>
+                <div id="setupError" class="login-error"></div>
+            </div>
+
+            <div id="loginForm" class="login-form" style="display:none;">
+                <input type="password" id="loginPassword" placeholder="Enter password" autocomplete="current-password">
+                <button id="loginBtn" class="login-btn">Unlock</button>
+                <div id="loginError" class="login-error"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application (hidden until authenticated) -->
+    <div id="appContainer" class="container" style="display:none;">
         <header>
             <h1>📊 TELOS Master File</h1>
             <p class="subtitle">Comprehensive Life Management Dashboard</p>
         </header>
 
         <div class="privacy-banner">
-            <label class="privacy-toggle">
-                <input type="checkbox" id="privacyToggle">
-                <span>🔒 Privacy Mode</span>
-            </label>
+            <div class="privacy-controls">
+                <label class="privacy-toggle">
+                    <input type="checkbox" id="privacyToggle">
+                    <span>👁 Reveal Private Data</span>
+                </label>
+                <button id="lockBtn" class="lock-btn">🔒 Lock</button>
+            </div>
+            <p class="session-info">Auto-locks after 5 minutes of inactivity</p>
         </div>
 
         <nav class="tab-nav">
@@ -34,7 +64,7 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>Financial Health</h3>
-                        <div class="stat-value private-content">$XX,XXX</div>
+                        <div class="stat-value private-content" data-field="net_worth">[Locked]</div>
                         <p class="stat-label">Net Worth</p>
                     </div>
                     <div class="stat-card">
@@ -57,10 +87,10 @@
                 <div class="quick-links">
                     <h2>Quick Actions</h2>
                     <div class="link-grid">
-                        <a href="#" class="quick-link">📝 Add Transaction</a>
-                        <a href="#" class="quick-link">🎯 Update Goals</a>
-                        <a href="#" class="quick-link">💪 Log Workout</a>
-                        <a href="#" class="quick-link">📚 Track Learning</a>
+                        <a href="#" class="quick-link" onclick="return false;">📝 Add Transaction</a>
+                        <a href="#" class="quick-link" onclick="return false;">🎯 Update Goals</a>
+                        <a href="#" class="quick-link" onclick="return false;">💪 Log Workout</a>
+                        <a href="#" class="quick-link" onclick="return false;">📚 Track Learning</a>
                     </div>
                 </div>
             </section>
@@ -71,27 +101,23 @@
                 <div class="content-grid">
                     <div class="card">
                         <h3>Bank Accounts</h3>
-                        <div class="private-content">
-                            <ul class="account-list">
-                                <li>Checking: $X,XXX.XX</li>
-                                <li>Savings: $XX,XXX.XX</li>
-                                <li>Investment: $XXX,XXX.XX</li>
-                            </ul>
+                        <div class="private-content" data-field="bank_accounts">
+                            <p>[Locked]</p>
                         </div>
                     </div>
                     <div class="card">
                         <h3>Monthly Budget</h3>
                         <div class="budget-item">
                             <span>Housing</span>
-                            <span class="private-content">$X,XXX</span>
+                            <span class="private-content" data-field="budget_housing">[Locked]</span>
                         </div>
                         <div class="budget-item">
                             <span>Food</span>
-                            <span class="private-content">$XXX</span>
+                            <span class="private-content" data-field="budget_food">[Locked]</span>
                         </div>
                         <div class="budget-item">
                             <span>Transportation</span>
-                            <span class="private-content">$XXX</span>
+                            <span class="private-content" data-field="budget_transport">[Locked]</span>
                         </div>
                     </div>
                 </div>
@@ -105,11 +131,11 @@
                         <h3>Fitness Tracking</h3>
                         <div class="health-metric">
                             <span>Weight:</span>
-                            <span class="private-content">XXX lbs</span>
+                            <span class="private-content" data-field="weight">[Locked]</span>
                         </div>
                         <div class="health-metric">
                             <span>BMI:</span>
-                            <span class="private-content">XX.X</span>
+                            <span class="private-content" data-field="bmi">[Locked]</span>
                         </div>
                         <div class="health-metric">
                             <span>Weekly Workouts:</span>
@@ -118,9 +144,9 @@
                     </div>
                     <div class="card">
                         <h3>Medical Information</h3>
-                        <p class="private-content">Blood Type: X+</p>
-                        <p class="private-content">Allergies: XXXXX</p>
-                        <p class="private-content">Medications: XXXXX</p>
+                        <p class="private-content" data-field="blood_type">[Locked]</p>
+                        <p class="private-content" data-field="allergies">[Locked]</p>
+                        <p class="private-content" data-field="medications">[Locked]</p>
                     </div>
                 </div>
             </section>
@@ -138,10 +164,10 @@
                     <div class="card">
                         <h3>Skills & Certifications</h3>
                         <ul>
-                            <li>✅ Community Outreach</li>
-                            <li>✅ Volunteer Management</li>
-                            <li>✅ Program Development</li>
-                            <li>🔄 Customer Success (In Progress)</li>
+                            <li>Community Outreach</li>
+                            <li>Volunteer Management</li>
+                            <li>Program Development</li>
+                            <li>Customer Success (In Progress)</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -159,18 +185,14 @@
                 <div class="content-grid">
                     <div class="card">
                         <h3>Basic Information</h3>
-                        <div class="private-content">
-                            <p><strong>Name:</strong> Kaleb Brandy</p>
-                            <p><strong>Date of Birth:</strong> XX/XX/XXXX</p>
-                            <p><strong>SSN:</strong> XXX-XX-XXXX</p>
+                        <div class="private-content" data-field="basic_info">
+                            <p>[Locked]</p>
                         </div>
                     </div>
                     <div class="card">
                         <h3>Contact Information</h3>
-                        <div class="private-content">
-                            <p><strong>Email:</strong> XXXXX@XXXXX.com</p>
-                            <p><strong>Phone:</strong> (XXX) XXX-XXXX</p>
-                            <p><strong>Address:</strong> XXXXX</p>
+                        <div class="private-content" data-field="contact_info">
+                            <p>[Locked]</p>
                         </div>
                     </div>
                     <div class="card">
@@ -184,9 +206,11 @@
 
         <footer>
             <p>Last Updated: <span id="lastUpdated"></span></p>
+            <p class="encryption-notice">🔐 Sensitive data encrypted with AES-256-GCM</p>
         </footer>
     </div>
 
+    <script src="crypto.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
