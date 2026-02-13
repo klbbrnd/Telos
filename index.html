@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELOS Master File</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 TELOS Master File</h1>
+            <p class="subtitle">Comprehensive Life Management Dashboard</p>
+        </header>
+
+        <div class="privacy-banner">
+            <label class="privacy-toggle">
+                <input type="checkbox" id="privacyToggle">
+                <span>🔒 Privacy Mode</span>
+            </label>
+        </div>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+            <button class="tab-btn" data-tab="finances">Finances</button>
+            <button class="tab-btn" data-tab="health">Health</button>
+            <button class="tab-btn" data-tab="career">Career</button>
+            <button class="tab-btn" data-tab="personal">Personal</button>
+        </nav>
+
+        <main>
+            <!-- Dashboard Tab -->
+            <section id="dashboard" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Financial Health</h3>
+                        <div class="stat-value private-content">$XX,XXX</div>
+                        <p class="stat-label">Net Worth</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Career Progress</h3>
+                        <div class="stat-value">75%</div>
+                        <p class="stat-label">Goals Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Health Score</h3>
+                        <div class="stat-value">8.5/10</div>
+                        <p class="stat-label">Overall Wellness</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Personal Growth</h3>
+                        <div class="stat-value">12</div>
+                        <p class="stat-label">Skills Developed</p>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <h2>Quick Actions</h2>
+                    <div class="link-grid">
+                        <a href="#" class="quick-link">📝 Add Transaction</a>
+                        <a href="#" class="quick-link">🎯 Update Goals</a>
+                        <a href="#" class="quick-link">💪 Log Workout</a>
+                        <a href="#" class="quick-link">📚 Track Learning</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Finances Tab -->
+            <section id="finances" class="tab-content">
+                <h2>Financial Overview</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>Bank Accounts</h3>
+                        <div class="private-content">
+                            <ul class="account-list">
+                                <li>Checking: $X,XXX.XX</li>
+                                <li>Savings: $XX,XXX.XX</li>
+                                <li>Investment: $XXX,XXX.XX</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Monthly Budget</h3>
+                        <div class="budget-item">
+                            <span>Housing</span>
+                            <span class="private-content">$X,XXX</span>
+                        </div>
+                        <div class="budget-item">
+                            <span>Food</span>
+                            <span class="private-content">$XXX</span>
+                        </div>
+                        <div class="budget-item">
+                            <span>Transportation</span>
+                            <span class="private-content">$XXX</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Tab -->
+            <section id="health" class="tab-content">
+                <h2>Health & Wellness</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>Fitness Tracking</h3>
+                        <div class="health-metric">
+                            <span>Weight:</span>
+                            <span class="private-content">XXX lbs</span>
+                        </div>
+                        <div class="health-metric">
+                            <span>BMI:</span>
+                            <span class="private-content">XX.X</span>
+                        </div>
+                        <div class="health-metric">
+                            <span>Weekly Workouts:</span>
+                            <span>5/7</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Medical Information</h3>
+                        <p class="private-content">Blood Type: X+</p>
+                        <p class="private-content">Allergies: XXXXX</p>
+                        <p class="private-content">Medications: XXXXX</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Career Tab -->
+            <section id="career" class="tab-content">
+                <h2>Career Development</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>Current Role</h3>
+                        <p><strong>Position:</strong> Resident - Transitional Housing Program</p>
+                        <p><strong>Organization:</strong> Buffalo City Mission</p>
+                        <p><strong>Focus:</strong> Volunteer Coordination & Community Outreach</p>
+                    </div>
+                    <div class="card">
+                        <h3>Skills & Certifications</h3>
+                        <ul>
+                            <li>✅ Community Outreach</li>
+                            <li>✅ Volunteer Management</li>
+                            <li>✅ Program Development</li>
+                            <li>🔄 Customer Success (In Progress)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Job Search Progress</h3>
+                        <p><strong>Target Location:</strong> Alabama</p>
+                        <p><strong>Interviews Scheduled:</strong> March 4-5, 2026</p>
+                        <p><strong>Applications Sent:</strong> 15</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personal Tab -->
+            <section id="personal" class="tab-content">
+                <h2>Personal Information</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>Basic Information</h3>
+                        <div class="private-content">
+                            <p><strong>Name:</strong> Kaleb Brandy</p>
+                            <p><strong>Date of Birth:</strong> XX/XX/XXXX</p>
+                            <p><strong>SSN:</strong> XXX-XX-XXXX</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Contact Information</h3>
+                        <div class="private-content">
+                            <p><strong>Email:</strong> XXXXX@XXXXX.com</p>
+                            <p><strong>Phone:</strong> (XXX) XXX-XXXX</p>
+                            <p><strong>Address:</strong> XXXXX</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Important Dates</h3>
+                        <p><strong>Move to Alabama:</strong> February 2026</p>
+                        <p><strong>Interviews:</strong> March 4-5, 2026</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Last Updated: <span id="lastUpdated"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

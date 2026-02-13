@@ -10,7 +10,10 @@ Other sections that aren't those core sections are additional context to support
 
 ## HISTORY
 
--
+- Currently a resident at Buffalo City Mission's Transitional Housing Program
+- Focused on volunteer coordination and community outreach
+- Planning move to Alabama in February 2026
+- Job interviews scheduled for March 4-5, 2026
 
 ## PROBLEMS
 
@@ -29,8 +32,8 @@ Other sections that aren't those core sections are additional context to support
 
 ## GOALS
 
-- G1:
-- G2:
+- G1: Secure stable housing in Alabama by February 2026
+- G2: Land a job through March 2026 interviews
 - G3:
 - G4:
 
@@ -45,6 +48,13 @@ Other sections that aren't those core sections are additional context to support
 - S1:
 - S2:
 - S3:
+
+## SKILLS
+
+- Community Outreach
+- Volunteer Management
+- Program Development
+- Customer Success (In Progress)
 
 ## IDEAS
 
@@ -61,7 +71,7 @@ Other sections that aren't those core sections are additional context to support
 
 ## METRICS
 
-- K1:
+- K1: Applications sent (current: 15)
 - K2:
 - K3:
 
