@@ -67,7 +67,22 @@ Other sections that aren't those core sections are additional context to support
 
 ## WISDOM
 
--
+- W1: TL;DR — "How to Build a Killer Artist Portfolio" by @arthemort (Source: https://x.com/arthemort/status/2022226498401325221)
+  1. A portfolio is a persuasion document — its job is to save the reader's time and maximize the limited attention you get.
+  2. You should have multiple portfolios tailored to each specific person or opportunity you're approaching.
+  3. A website, Linktree, or Google Drive folder is not a portfolio — it's a PDF you attach to an email, period.
+  4. A gallerist gets ~90 portfolios a month; without yours, it takes 30-60 min to understand you — with one, under 10.
+  5. In 10-12 pages, communicate: who you are, what you've done, what your work is about, and what you're working on now.
+  6. Structure: Cover, Bio, CV, Artist Statement, Current & Past Works, Annexes.
+  7. Your bio is your anchor — focus on the life events and realizations that shaped you, not a repeat of your CV.
+  8. If you don't frame your own story, someone else will fill the gaps with their biases and you lose control of your identity.
+  9. The artist statement is about intention and context — why you must be an artist and why the world needs your perspective.
+  10. Specifying your intention doesn't kill the magic; it gives the viewer a key to decipher the enigma you present.
+  11. Always lead with what you're currently working on, even if it's unfinished — people want to support what inspires you now, not sold-out hits.
+  12. Treat your past works section as a visual essay showing coherence across themes, techniques, and media over time.
+  13. Each piece should logically follow the last — the sequence itself should demonstrate your artistic logic and evolution.
+  14. Annexes are your bonus ammo: analytics, sales data, quotes from professionals, press, social proof, even a personal letter.
+  15. The principle of equivalent exchange: show that you value their time and work as much as you expect them to value yours.
 
 ## METRICS
 
